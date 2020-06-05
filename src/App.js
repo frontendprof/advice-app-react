@@ -34,7 +34,12 @@ class App extends React.Component{
     render(){
         const {advice}=this.state;
         return(
-            <h1>{advice}</h1>
+            <div className="app">
+                <div className="card">
+                    <h1 className="heading">{advice}</h1>
+                </div>
+            </div>
+            
         );
     }
 }
