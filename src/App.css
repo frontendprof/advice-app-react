@@ -7,7 +7,7 @@
 
 .app{
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.8)),url("./images/city.jpg");
+    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.5)),url("./images/city.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -18,14 +18,118 @@
 
 
 .card{
-    background-color: whitesmoke;
+    background-color: transparent;
     width: 40%;
-    height: 20%;
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 25px;
     padding: 2%;
-    box-shadow: 10px 10px;
+    box-shadow: 5px 5px 10px 5px  rgb(241, 124, 124);
 }
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 582px;
+    font-family: 'Architects Daughter', cursive;
+    color:rgb(209, 245, 9);
+}
+
+.button{
+    position: relative;
+    outline:none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    text-transform: uppercase;
+    height: 200px;
+    width: 210px;
+    opacity: 1;
+    background-color: #fff;
+    border:1px solid dodgerblue;
+    padding: 5px 15px;
+    margin-bottom: 5px;
+}
+
+.button span{
+    color:blue;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .7px;
+}
+
+.button:hover{
+    animation:rotate .7s ease-in-out both;
+}
+
+.button:hover span{
+    animation:storm .7s ease-in-out both;
+    animation-delay:.06s;
+}
+
+@keyframes rotate{
+    0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+   
+@keyframes storm {
+
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+} 
+
+
+@media only screen and (max-width: 600px) {
+
+    .card {
+
+        width: 80%;
+        height: 30%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
